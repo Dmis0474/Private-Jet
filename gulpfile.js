@@ -88,13 +88,14 @@ gulp.task("browser-sync", () => {
 gulp.task(
   "watch",
   gulp.parallel(
+    "browser-sync",
     "img",
     "vendor-styles",
     "vendor-scripts",
     "sass",
     "jsmin",
     "inject",
-    "browser-sync",
+    
  
 
     () => {

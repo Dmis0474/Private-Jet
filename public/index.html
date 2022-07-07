@@ -66,9 +66,17 @@
     <container class="content">
       <div class="form">
         <div class="form__navigation">
-          <a href="" class="navigation__item">Round Trip</a>
-          <a href="" class="navigation__item">Flight Type</a>
-          <a href="" class="navigation__item">Person</a>
+          <a href="" class="navigation__item"
+            >Round Trip <img src="./img/vector.png" alt="" class="item__icon"
+          /></a>
+
+          <a href="" class="navigation__item"
+            >Flight Type <img src="./img/vector.png" alt="" class="item__icon"
+          /></a>
+
+          <a href="" class="navigation__item"
+            >Person <img src="./img/vector.png" alt="" class="item__icon"
+          /></a>
         </div>
         <div class="form__box">
           <div class="form__direction form__direction--from">
@@ -84,22 +92,97 @@
           </div>
           <div class="form__direction form__direction--result">
             <div class="direction__box direction__box--from">
-              <p class="diretion__item">FROM</p>
-              <h5 class="direction__header">LAX</h5>
-              <p class="diretion__item">LOS ANGELES INTL ARPT,LOS ANGELES</p>
+              <p class="diretion__item">Departure</p>
+              <h5 class="direction__header">Fri 15 Oct</h5>
+              <div class="direction__slider">
+                <a class="diretion__item--leftPrev">Prev</a>
+                <a class="diretion__item--leftNext">Next</a>
+              </div>
             </div>
             <img src="./img/calendar.png" alt="" class="direction__icon" />
             <div class="direction__box direction__box--to">
               <p class="diretion__item">TO</p>
               <h5 class="direction__header">MIA</h5>
-              <p class="diretion__item">MIAMI INTL,MIAMI</p>
+              <div class="direction__slider">
+                <a class="diretion__item--rightPrev">Prev</a>
+                <a class="diretion__item--rightNext">Next</a>
+              </div>
             </div>
             <img src="./img/calendar.png" alt="" class="direction__icon" />
           </div>
         </div>
         <a href="" class="form__link">Add Requirements</a>
-        <button class="button form__button">Sign in</button>
+        <button class="button form__button">
+          Book Flights
+          <img
+            src="./img/white arrow.png"
+            alt="arrow"
+            class="arrow button__arrow"
+          />
+        </button>
       </div>
+    </container>
+    <section class="info">
+      <h3 class="info__header">Private Jet for Business & Leisure Purposes</h3>
+      <div class="info__box">
+        <img src="./img/info_img1.png" alt="" class="info__img" />
+        <div class="info__item info__item--first">
+          <h4 class="item__header">Private Jet Charter</h4>
+          <p class="item__description">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English. Many desktop publishing
+            packages and web page editors
+          </p>
+        </div>
+      </div>
+      <div class="info__box info__box--buttom info__box--background">
+        <img src="./img/info_img2.png" alt="" class="info__img" />
+        <div class="info__item info__item--first">
+          <h4 class="item__header">Private Jet Charter</h4>
+          <p class="item__description">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English. Many desktop publishing
+            packages and web page editors
+          </p>
+        </div>
+      </div>
+    </section>
+    <container class="content">
+      
+      <section class="specification">
+        <div class="specifications__box">
+          <div class="specification__item">
+            <img src="./img/specification_seat.png" alt="" class="specification__icon">
+            <h6 class="box__header">Luxury And Comfort</h6>
+            <p class="specification__info">It is a long established fact that a reader will be distracted by the readable</p>
+          </div>
+          <div class="specification__item">
+            <img src="./img/specification_schedule.png" alt="" class="specification__icon">
+            <h6 class="box__header">Personal schedule & booking</h6>
+            <p class="specification__info">It is a long established fact that a reader will be distracted by the readable</p>
+          </div>
+        </div>
+        <img src="./img/plane.png" alt="" class="specification__img">
+        <div class="specifications__box">
+          <div class="specification__item">
+            <img src="./img/specification_webbrowser.png" alt="" class="specification__icon">
+            <h6 class="box__header">SAFETY AND SECURITY</h6>
+            <p class="specification__info">It is a long established fact that a reader will be distracted by the readable</p>
+          </div>
+          <div class="specification__item">
+            <img src="./img/specification_captain.png" alt="" class="specification__icon">
+            <h6 class="box__header">EXPERIENCED CREW</h6>
+            <p class="specification__info">It is a long established fact that a reader will be distracted by the readable</p>
+          </div>
+        </div>
+      </section>
+      
     </container>
 
     <!-- inject:js -->

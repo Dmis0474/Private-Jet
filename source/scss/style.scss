@@ -51,7 +51,7 @@ span {
     position: absolute;
     top: 0;
     left: 0;
-    height: 751px;
+    height: 746px;
     width: auto;
   }
 }
@@ -108,4 +108,200 @@ span {
   margin: 0 auto;
   z-index: 1;
   position: absolute;
+  box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08),
+    0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03),
+    0px 1px 3px rgba(19, 10, 46, 0.13);
+  padding: 34px 30px 0 29px;
+  box-sizing: border-box;
+
+  &__navigation {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    .navigation__item {
+      text-decoration: none;
+      color: #151515;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    margin-top: 24px;
+  }
+
+  &__direction {
+    width: 300px;
+    height: 117px;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    display: block;
+    padding: 16px 0 0 20px;
+  }
+
+  .direction__header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: capitalize;
+    margin: 4px 0 4px 0;
+  }
+
+  .diretion__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #151515;
+    opacity: 0.6;
+  }
+
+  &__direction--result {
+    margin-left: 30px;
+    width: 381px;
+    height: 117px;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: center;
+
+    .direction__icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 31px;
+      margin-left: 25px;
+    }
+    .direction__slider {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: #151515;
+      opacity: 0.6;
+    }
+
+    .direction__box {
+      min-width: 110px;
+    }
+
+    .diretion__item--rightPrev {
+      margin-right: 44px;
+    }
+  }
+
+  .direction__img {
+    width: 28px;
+    height: 28px;
+    margin: auto 6px;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 15px;
+    color: #151515;
+  }
+
+  &__button {
+    display: block;
+    width: 233px;
+    height: 80px;
+    margin: -20px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 27px 31px 26px 31px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: capitalize;
+    color: #ffffff;
+    border-color: #656293;
+  }
+
+  .button__arrow {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.info {
+  margin-top: 456px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+
+  &__header {
+    font-weight: 700px;
+    font-size: 36px;
+    line-height: 54px;
+    margin-bottom: 131px;
+    text-align: center;
+  }
+  &__box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 65px 151px 65px 199px;
+    background-image: url("/img/info_bg.png");
+    background-position: left;
+    background-repeat: no-repeat;
+
+    &--buttom {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: end;
+      background-image: url("/img/info_bg_buttom.png") ;
+      transform: rotate(180deg);
+      background-position: left;
+      background-repeat: no-repeat;
+    }
+
+    .info__item {
+      display: block;
+      max-width: 463px;
+      margin: 0 38px 0 38px;
+
+      .item__header {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: #000000;
+        margin-bottom: 14px;
+      }
+
+      .item__description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+        color: #151515;
+        opacity: 0.6;
+      }
+    }
+
+    .info__img {
+      width: 589px;
+      height: 392px;
+      z-index: 1;
+    }
+  }
+}
+
+.specification {
+  display: block;
+  margin-top: 83px;
+  &__items{
+    display: flex;
+    justify-content: center;
+  }
 }
