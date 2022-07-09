@@ -36,7 +36,6 @@ button {
   background-size: cover;
   height: 745px;
 
-
   &__top {
     display: flex;
     justify-content: space-around;
@@ -139,8 +138,9 @@ button {
   margin: -125px auto 0 auto;
   z-index: 1;
   position: absolute;
-  box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07),
-    0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
+  box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08),
+    0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03),
+    0px 1px 3px rgba(19, 10, 46, 0.13);
   padding: 34px 30px 0 29px;
   box-sizing: border-box;
 
@@ -297,8 +297,6 @@ button {
       background-position: right;
       background-repeat: no-repeat;
     }
-
-  
   }
 
   .item__header {
@@ -309,7 +307,6 @@ button {
     margin-bottom: 14px;
   }
 
-  
   .item__description {
     font-weight: 400;
     font-size: 16px;
@@ -319,17 +316,13 @@ button {
     opacity: 0.6;
   }
 
+  .info__item {
+    display: block;
+    max-width: 463px;
+    margin: 0 38px 0 38px;
 
-    .info__item {
-      display: block;
-      max-width: 463px;
-      margin: 0 38px 0 38px;
-
-      &--second {
-        
-      }
-
-      
+    &--second {
+    }
 
     .info__img {
       width: 589px;
@@ -349,8 +342,9 @@ button {
 
   &__item {
     background: #ffffff;
-    box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07),
-      0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
+    box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08),
+      0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03),
+      0px 1px 3px rgba(19, 10, 46, 0.13);
     border-radius: 12px;
     padding: 40px 52px 51px 52px;
     display: flex;
@@ -398,8 +392,9 @@ button {
 
   &__item {
     background: #ffffff;
-    box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07),
-      0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
+    box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08),
+      0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03),
+      0px 1px 3px rgba(19, 10, 46, 0.13);
     border-radius: 12px;
     padding: 9px 11px 14px 11px;
     display: flex;
@@ -416,12 +411,15 @@ button {
 }
 
 .membership {
+ 
   &__items {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
+    margin-top: 30px;
+    display: block;
+    // justify-content: center;
+    // flex-direction: row;
+    // align-items: center;
+    // gap: 24px;
+    max-height: 926px;
   }
 
   &__item {
@@ -439,6 +437,19 @@ button {
     &--right {
       border-radius: 0px 20px 20px 0px;
     }
+  }
+
+  &__item:hover {
+    background: #656293;
+    margin-bottom: 30px;
+    bottom: 30px;
+  }
+
+  &__item:hover > button {
+    background-color: #fff;
+    color: #656293;
+    transition-duration: .2s;
+
   }
 
   &__title {
@@ -463,8 +474,8 @@ button {
     margin-bottom: 18px;
   }
 
-  &__list-item{
-    display:flex;
+  &__list-item {
+    display: flex;
     flex-direction: row;
     align-items: center;
   }
@@ -500,6 +511,10 @@ button {
     color: #fff;
     border: 1px solid #656293;
     box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+    transition-property: bottom;
+    
   }
 
   &__img {
