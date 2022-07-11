@@ -411,14 +411,13 @@ button {
 }
 
 .membership {
- 
   &__items {
     margin-top: 30px;
-    display: block;
-    // justify-content: center;
-    // flex-direction: row;
-    // align-items: center;
-    // gap: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
     max-height: 926px;
   }
 
@@ -439,6 +438,23 @@ button {
     }
   }
 
+  &__price {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+    .min {
+      font-size: 18px;
+      line-height: 40px;
+      font-weight: 400;
+      color: #161616;
+    }
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+
   &__item:hover {
     background: #656293;
     margin-bottom: 30px;
@@ -448,8 +464,26 @@ button {
   &__item:hover > button {
     background-color: #fff;
     color: #656293;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
+  }
 
+  &__item:hover > h2 {
+    color: #fff;
+  }
+
+  &__item:hover > ul {
+    color: #fff;
+  }
+
+  &__item:hover > p {
+    color: #fff;
+    span {
+      color: #fff !important;
+    }
+  }
+
+  &__item:hover > path {
+    fill: red;
   }
 
   &__title {
@@ -480,26 +514,9 @@ button {
     align-items: center;
   }
 
-  &__icon {
-    margin-right: 10px;
-  }
-
   &__line {
     border: 1px dashed #a9a9aa;
     margin-bottom: 65px;
-  }
-
-  &__price {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 24px;
-    .min {
-      font-size: 18px;
-      line-height: 40px;
-      font-weight: 400;
-      color: #161616;
-    }
   }
 
   &__button {
@@ -514,12 +531,18 @@ button {
     position: relative;
     bottom: 0;
     transition-property: bottom;
-    
   }
+}
 
-  &__img {
+.plane {
+  &__box {
     margin-top: 18px;
-    margin-left: 300px;
+    box-sizing: border-box;
+  }
+  &__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

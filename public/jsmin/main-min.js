@@ -1,1 +1,1 @@
-function slicker(){$(".options__items").slick({infinite:!0,slidesToShow:2,slidesToScroll:2})}
+$(document).ready(function(){$(".options__items").slick({infinite:!0,slidesToShow:4,slidesToScroll:4})});
