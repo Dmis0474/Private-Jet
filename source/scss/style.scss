@@ -6,6 +6,7 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 span {
@@ -275,6 +276,7 @@ button {
     margin-bottom: 69px;
     text-align: center;
   }
+
   &__box {
     width: 1110px;
     display: flex;
@@ -297,6 +299,17 @@ button {
       background-position: right;
       background-repeat: no-repeat;
     }
+  }
+
+  &__img {
+    max-width: 550px;
+    min-width: 350px;
+    width: auto;
+  }
+
+  &__item {
+    max-width: 550px;
+    width: auto;
   }
 
   .item__header {
@@ -418,13 +431,12 @@ button {
     flex-direction: row;
     align-items: center;
     gap: 24px;
-    max-height: 926px;
   }
 
   &__item {
     background: #f5f5f5;
     padding: 24px;
-    transition: all .4s ease-in-out 0.5s;
+    transition: all 0.4s ease-in-out 0.5s;
 
     &--left {
       border-radius: 20px 0px 0px 20px;
@@ -458,14 +470,13 @@ button {
 
   &__item:hover {
     background: #656293;
-    transform: translateY(-20px); 
-    transition: all .4s ease-in-out;
+    transform: translateY(-20px);
+    transition: all 0.4s ease-in-out;
   }
 
   &__item:hover > button {
     background-color: #fff;
     color: #656293;
-    
   }
 
   &__item:hover > h2 {
@@ -483,10 +494,9 @@ button {
     }
   }
 
-  &__item:hover > .membership__list > .membership__list-item > svg > path{
-      fill: #fff;
-  } 
-  
+  &__item:hover > .membership__list > .membership__list-item > svg > path {
+    fill: #fff;
+  }
 
   &__title {
     font-weight: 700;
@@ -594,5 +604,177 @@ button {
     line-height: 21px;
     color: #fff;
     opacity: 0.7;
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .header {
+    background-image: url("/img/header_bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 745px;
+  }
+
+  .info__box,
+  .info__box--buttom {
+    width: auto;
+  }
+
+  .membership__button {
+    max-width: 300px;
+  }
+}
+
+@media screen and(max-width: 1100px) {
+  .header__menu {
+    margin: 0;
+  }
+
+  .advertisement {
+    .container {
+      max-width: 900px;
+    }
+
+    &__box {
+      margin-left: 30px;
+    }
+
+    &__discription {
+      font-size: 44px;
+      line-height: 50px;
+    }
+  }
+
+  .form {
+    max-width: 950px;
+    position: static;
+
+    &__box {
+      display: flex;
+      justify-content: start;
+
+      &__direction {
+        max-width: 250px;
+
+        &--result {
+          max-width: 350px;
+          .direction__icon {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .specification {
+    margin-left: 20px;
+    margin-right: 20px;
+    &__item {
+      padding: auto;
+    }
+
+    &__img {
+      max-width: auto;
+      min-width: auto;
+    }
+  }
+
+  .membership {
+    &__items {
+      margin: 20px;
+      display: block;
+    }
+
+    &__item {
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__title,
+    &__discription {
+      margin: 8px auto 8px auto;
+    }
+
+    &__line {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .membership__list-item {
+        display: block;
+      }
+    }
+  }
+
+  .footer__items{
+    padding: 17px 30px 15px 30px;
+  }
+}
+
+@media screen and(max-width: 950px) {
+  .header {
+    &__top {
+    display: block;
+    margin-left: 20px;
+    }
+    &__menu {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    &__form {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px
+    }
+
+  }
+
+  .header > .container {
+    display: flex;
+    margin-left: 0;
+
+    .advertisement {
+      position: absolute;
+      top: 30px;
+      left: 150px;
+      margin-top: 0px;
+      &__discription {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .form {
+    width: auto;
+    height: auto;
+    &__box{
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    &__direction {
+      width: 100%;
+      max-width: 850px;
+      margin: 10px;
+      align-items: center;
+      &--result {
+        justify-content: space-around;
+      }
+    }
   }
 }
