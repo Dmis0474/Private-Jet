@@ -1,5 +1,18 @@
-$(document).ready(function(){
-  $('.options__items').slick({
+let menuButton = document.createElement("button");
+menuButton.className = "button adaptiveMenu__button";
+menuButton.innerHTML = "Menu";
+menuButton.onclick = hideMenu;
+document.querySelector(".adaptiveMenu").appendChild(menuButton);
+
+
+
+function hideMenu() {
+  document.querySelector(".header__menu").classList.toggle("active");
+}
+
+
+$(document).ready(function () {
+  $(".options__items").slick({
     dots: true,
     infinite: false,
     speed: 300,
@@ -12,26 +25,26 @@ $(document).ready(function(){
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
-        }
+          slidesToScroll: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+          slidesToScroll: 1,
+        },
+      },
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
-    ]
+    ],
   });
-})
+});

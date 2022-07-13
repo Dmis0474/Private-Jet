@@ -64,6 +64,14 @@ button {
     gap: 20px;
     flex-direction: row;
     align-items: center;
+    &__button {
+      width: 93px;
+      height: 31px;
+      cursor: pointer;
+    }
+    .adaptiveMenu {
+      display: none;
+    }
   }
 
   &__background {
@@ -73,9 +81,6 @@ button {
     height: 746px;
     width: auto;
   }
-}
-
-.header {
   &__button {
     width: 93px;
     height: 31px;
@@ -525,8 +530,6 @@ button {
 
   &__button {
     max-width: 352px;
-    width: 100%;
-    min-width: 300px;
     height: 64px;
     font-weight: 600;
     font-size: 22px;
@@ -743,8 +746,8 @@ button {
 }
 
 @media screen and(max-width: 540px) {
-  .header{
-  
+  .header {
+    width: 100%;
     &__logo {
       margin-right: 20px;
       width: 110px;
@@ -752,22 +755,62 @@ button {
 
     &__top {
       display: flex;
+      justify-content: space-between;
+      padding-right: 20px;
     }
 
     &__form {
       align-items: center;
+      margin-left: 0;
+      .adaptiveMenu {
+        display: block;
+      }
+      .header__description {
+        display: none;
+      }
+      .header__button {
+        display: none;
+      }
     }
-    
-    &__menu{
+
+    &__menu {
       display: none;
+    }
+
+    &__menu.active {
+      display: flex;
+      margin: 0;
+      position: absolute;
+      top: 80px;
+      right: 20px;
     }
     .advertisement {
       position: relative;
       left: 20px;
-      
+      top: 160px;
+      font-size: 35px;
+      &__discription {
+        position: relative;
+        top: -150px;
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 200px;
+        width: 100%;
+        min-width: 130px;
+      }
+      &__link {
+        margin-top: 180px;
+      }
+    }
+    .adaptiveMenu {
+      &__button {
+        width: 93px;
+        height: 31px;
+      }
     }
   }
   .form {
+    margin-top: -75px;
     .navigation__item {
       font-size: 12px;
       margin-right: 10px;
@@ -802,14 +845,13 @@ button {
   }
 
   .info {
-    &__box, &__box--buttom {
+    &__box,
+    &__box--buttom {
       width: 100%;
       padding: 10px;
     }
     &__img {
       width: 80%;
-    
-
     }
   }
 
@@ -823,6 +865,7 @@ button {
 
     &__button {
       width: 100%;
+      min-width: 200px;
     }
   }
 
