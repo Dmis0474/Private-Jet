@@ -31,7 +31,7 @@ gulp.task("img", () => {
 
 gulp.task("vendor-styles", () =>
   gulp
-    .src("source/css/**.css", { allowEmpty: true })
+    .src("source/vendor-styles/**.css", { allowEmpty: true })
     .pipe(gulp.dest("public/css"))
 );
 
@@ -101,7 +101,7 @@ gulp.task(
 
     () => {
       gulp.watch("source/img/*", gulp.parallel("img"));
-      gulp.watch("source/css/**.css", gulp.parallel("vendor-styles"));
+      gulp.watch("source/vendor-styles/**.css", gulp.parallel("vendor-styles"));
       gulp.watch("source/libs/**/*.js", gulp.parallel("vendor-scripts"));
       gulp.watch("source/scss/**/*.scss", gulp.parallel("sass"));
       gulp.watch("source/js/main.js", gulp.parallel("jsmin"));

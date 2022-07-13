@@ -1,14 +1,16 @@
 let menuButton = document.createElement("button");
 menuButton.className = "button adaptiveMenu__button";
 menuButton.innerHTML = "Menu";
-menuButton.onclick = hideMenu;
+menuButton.onclick = showMenu;
 document.querySelector(".adaptiveMenu").appendChild(menuButton);
 
 
 
-function hideMenu() {
+function showMenu() {
   document.querySelector(".header__menu").classList.toggle("active");
 }
+
+
 
 
 $(document).ready(function () {

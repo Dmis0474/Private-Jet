@@ -69,9 +69,15 @@ button {
       height: 31px;
       cursor: pointer;
     }
-    .adaptiveMenu {
-      display: none;
-    }
+
+   
+  }
+
+  &__description--forAdapt, .adaptiveMenu__button {
+    display: none;
+  }
+  .adaptiveMenu {
+    display: none;
   }
 
   &__background {
@@ -530,6 +536,7 @@ button {
 
   &__button {
     max-width: 352px;
+    width: 100%;
     height: 64px;
     font-weight: 600;
     font-size: 22px;
@@ -639,6 +646,10 @@ button {
       align-items: flex-start;
       gap: 10px;
       margin-left: 20px;
+    }
+
+    &__description--forAdapt {
+      display: none;
     }
   }
 
@@ -757,6 +768,10 @@ button {
       display: flex;
       justify-content: space-between;
       padding-right: 20px;
+    }
+
+    &__description--forAdapt, .adaptiveMenu__button {
+      display: block;
     }
 
     &__form {
