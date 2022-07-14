@@ -1,22 +1,11 @@
-let menuButton = document.createElement("button");
-menuButton.className = "button adaptiveMenu__button";
-menuButton.innerHTML = "Menu";
-menuButton.onclick = showMenu;
-document.querySelector(".adaptiveMenu").appendChild(menuButton);
-
-
-
 function showMenu() {
   document.querySelector(".header__menu").classList.toggle("active");
 }
 
-
-
-
 $(document).ready(function () {
   $(".options__items").slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,

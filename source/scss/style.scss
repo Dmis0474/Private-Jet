@@ -156,8 +156,12 @@ button {
     gap: 10px;
 
     .navigation__item {
-      text-decoration: none;
+      
       color: #151515;
+      a {
+        text-decoration: none;
+        color:#151515;
+      }
     }
   }
 
@@ -290,6 +294,8 @@ button {
     background-image: url("/img/info_bg.png");
     background-position: left;
     background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
 
     &--buttom {
       margin-top: 50px;
@@ -306,7 +312,7 @@ button {
 
   &__img {
     max-width: 550px;
-    min-width: 350px;
+    min-width: 330px;
     width: auto;
   }
 
@@ -422,7 +428,11 @@ button {
 
   &__img {
     border-radius: 12px;
-    margin-bottom: 15px;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+  &__name {
+    text-align: center;
   }
 }
 
@@ -467,9 +477,7 @@ button {
     }
   }
 
-  svg {
-    margin-right: 10px;
-  }
+  
 
   &__item:hover {
     background: #656293;
@@ -497,8 +505,9 @@ button {
     }
   }
 
-  &__item:hover > .membership__list > .membership__list-item > svg > path {
-    fill: #fff;
+  &__item:hover > .membership__list > .membership__list-item {
+    background-image: url("/img/item-ok-white.svg");
+    
   }
 
   &__title {
@@ -527,6 +536,11 @@ button {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 28px;
+    background-image: url("/img/item-ok.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
   }
 
   &__line {
@@ -536,7 +550,7 @@ button {
 
   &__button {
     max-width: 352px;
-    width: 100%;
+    min-width: 250px;
     height: 64px;
     font-weight: 600;
     font-size: 22px;
@@ -577,6 +591,13 @@ button {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.2);
     margin-top: 30px;
+  }
+
+  &__menu{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
   }
 
   &__items {
@@ -712,6 +733,7 @@ button {
 
     &__img {
       margin-bottom: 30px;
+
     }
   }
 
@@ -860,13 +882,16 @@ button {
   }
 
   .info {
+    box-sizing: border-box;
     &__box,
     &__box--buttom {
-      width: 100%;
       padding: 10px;
     }
     &__img {
       width: 80%;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
     }
   }
 
@@ -889,6 +914,7 @@ button {
     text-align: center;
     .footer__menu {
       margin-bottom: 20px;
+      display: block;
     }
   }
 }
