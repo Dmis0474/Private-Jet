@@ -56,16 +56,20 @@ gulp.task("sass", () =>
 
 
 gulp.task("jsmin", () =>
-  gulp.src(["source/js/main.js"]).pipe(minify()).pipe(gulp.dest("public/jsmin"))
+  gulp.src(["source/js/main.js"])
+  .pipe(minify({
+    noSource: true,
+  }))
+  .pipe(gulp.dest("public/jsmin"))
 );
 
 gulp.task("inject", () => {
   var target = gulp.src("source/**/*.html");
   var source = gulp.src(
     [
-      "./public/jsmin/jquery/*.js",
-      "./public/jsmin/slick/*.js",
-      "./public/jsmin/*.js",
+      "./public/jsmin/jquery/**/*.js",
+      "./public/jsmin/slick/**/*.js",
+      "./public/jsmin/**/*.js",
       "public/css/**/*.css",
     ],
     {
@@ -85,6 +89,8 @@ gulp.task("browser-sync", () => {
     notify: false,
   });
 });
+
+gulp.task("clear", (callback) => cache.clearAll());
 
 gulp.task(
   "watch",
@@ -139,4 +145,3 @@ gulp.task(
   )
 );
 
-gulp.task("clear", (callback) => cache.clearAll());
