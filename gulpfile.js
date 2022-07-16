@@ -54,13 +54,15 @@ gulp.task("sass", () =>
     .pipe(gulp.dest("public/css"))
 );
 
-
 gulp.task("jsmin", () =>
-  gulp.src(["source/js/main.js"])
-  .pipe(minify({
-    noSource: true,
-  }))
-  .pipe(gulp.dest("public/jsmin"))
+  gulp
+    .src(["source/js/main.js"])
+    .pipe(
+      minify({
+        noSource: true,
+      })
+    )
+    .pipe(gulp.dest("public/jsmin"))
 );
 
 gulp.task("inject", () => {
@@ -78,8 +80,15 @@ gulp.task("inject", () => {
   );
   target
     .pipe(inject(source, { ignorePath: "public" }))
-    .pipe(gulp.dest("public"));
+    .pipe(gulp.dest("source"));
+  
 });
+
+gulp.task("vendor-html", () =>
+  gulp
+  .src(["source/index.html"])
+  .pipe(gulp.dest("public/"))
+);
 
 gulp.task("browser-sync", () => {
   browserSync({
@@ -95,15 +104,14 @@ gulp.task("clear", (callback) => cache.clearAll());
 gulp.task(
   "watch",
   gulp.parallel(
-    "browser-sync",
     "img",
     "vendor-styles",
     "vendor-scripts",
     "sass",
     "jsmin",
     "inject",
-    
- 
+    "vendor-html",
+    "browser-sync",
 
     () => {
       gulp.watch("source/img/*", gulp.parallel("img"));
@@ -112,6 +120,7 @@ gulp.task(
       gulp.watch("source/scss/**/*.scss", gulp.parallel("sass"));
       gulp.watch("source/js/main.js", gulp.parallel("jsmin"));
       gulp.watch("source/*.html", gulp.parallel("inject"));
+      gulp.watch("source/*.html", gulp.parallel("vendor-html"));
     }
   )
 );
@@ -128,20 +137,16 @@ gulp.task(
     "sass",
     "jsmin",
     "inject",
-    "browser-sync",
+    "vendor-html",
+
     () => {
-      const buildCss = gulp
-        .src(["app/css/main.css", "app/css/libs.min.css"])
-        .pipe(gulp.dest("dist/css"));
-
-      const buildFonts = gulp
-        .src("app/fonts/**/*")
-        .pipe(gulp.dest("dist/fonts"));
-
-      const buildJs = gulp.src("app/js/**/*").pipe(gulp.dest("dist/js"));
-
-      const buildHtml = gulp.src("app/*.html").pipe(gulp.dest("dist"));
+      gulp.watch("source/img/*", gulp.parallel("img"));
+      gulp.watch("source/vendor-styles/**.css", gulp.parallel("vendor-styles"));
+      gulp.watch("source/libs/**/*.js", gulp.parallel("vendor-scripts"));
+      gulp.watch("source/scss/**/*.scss", gulp.parallel("sass"));
+      gulp.watch("source/js/main.js", gulp.parallel("jsmin"));
+      gulp.watch("source/*.html", gulp.parallel("inject"));
+      gulp.watch("source/*.html", gulp.parallel("vendor-html"));
     }
   )
 );
-
